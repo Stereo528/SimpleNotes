@@ -31,7 +31,7 @@ public class QuickNoteScreen extends BaseNoteScreen{
 		this.addRenderableWidget(new NotesTextField(this.font, xPos, y+16, 200, 20,
 				Component.translatable("simplenotes.text_field.text_desc")
 		));
-		this.addRenderableWidget(new NotesButton(x-49, y+48, 98, 20,
+		this.addRenderableWidget(new NotesButton(x-50, y+48, 100, 20,
 				Component.translatable("simplenotes.button.exit"),
 				button -> Minecraft.getInstance().setScreen(null)
 		));
@@ -49,9 +49,9 @@ public class QuickNoteScreen extends BaseNoteScreen{
 		int y = (this.height - 150) / 2;
 		blit(poseStack, x, y, 0, 0, 250, 150);
 
-		this.font.draw(poseStack, title, (int) ((this.width/2) - title.toString().length()/4)-5, this.height/2 - 67, 16777215);
-		this.font.draw(poseStack, name, (int) ((this.width/2) - name.toString().length()/4)+4, this.height/2 - 36, 16777215);
-		this.font.draw(poseStack, desc, (int) ((this.width/2) - desc.toString().length()/4)-4, this.height/2 + 6, 16777215);
+		this.font.draw(poseStack, title, (int) (this.width/2) - 20, (int) (this.height/2.0 - 67), 16777215);
+		this.font.draw(poseStack, name, (int) (this.width/2) - 100, this.height/2 - 36, 16777215);
+		this.font.draw(poseStack, desc, (int) (this.width/2) - 100, this.height/2 + 6, 16777215);
 
 		super.render(poseStack, mouseX, mouseY, delta);
 	}

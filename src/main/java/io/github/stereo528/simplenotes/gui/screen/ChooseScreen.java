@@ -12,7 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
 public class ChooseScreen extends Screen {
-	private final ResourceLocation BACKGROUND = new ResourceLocation(SimpleNotes.MODID, "textures/gui/notes_bg.png");
+	private final ResourceLocation BACKGROUND = new ResourceLocation(SimpleNotes.MODID, "textures/gui/select_bg.png");
 	public ChooseScreen() {
 		super(Component.translatable("simplenotes.choose_screen.title"));
 	}
