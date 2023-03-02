@@ -11,17 +11,10 @@ import org.quiltmc.qsl.lifecycle.api.client.event.ClientTickEvents;
 import static io.github.stereo528.simplenotes.SimpleNotes.MODID;
 
 public class SimpleNotesClient implements ClientModInitializer {
-	public void onClick(Minecraft mc) {
-		while(SimpleNotesKeyBinds.TOGGLE.consumeClick()) {
-			mc.setScreen(new ChooseScreen());
-		}
-	}
 
 	@Override
 	public void onInitializeClient(ModContainer mod) {
 
 		MidnightConfig.init(MODID, ModConfig.class);
-		SimpleNotesKeyBinds.init();
-		ClientTickEvents.END.register(this::onClick);
 	}
 }
